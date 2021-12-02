@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Калькулятор</title>
+		<script defer src="script.js"></script>
 
-You can use the [editor on GitHub](https://github.com/donymane/02.12/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+	<style>
+	body {
+  		padding: 0;
+  		margin: 0;
+  		background: linear-gradient(to right, #123123, #4444);
+  		display: grid;
+  		justify-content: center;
+  		align-content: center;
+  		min-height: 95vh;
+  	}
+  	input{
+    	background-color: rgba(255, 255, 255, 0.75);
+		height: 20px;
+	}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+	input:hover{
+    	background-color: #4444;
+	}
 
-### Markdown
+	button{
+    	border: 1px solid white;
+    	background-color: rgba(255, 255, 255, 0.75);
+    	width: 40px;
+ 		height: 40px;
+ 		margin-left: 100px;
+	}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/donymane/02.12/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+	button:hover {
+    	background-color: #4444;
+	}
+  	</style>
+	</head>
+	<body>
+		<p>Первое число<input type="text" id="n1"></p>
+		<p>Второе число<input type="text" id="n2"></p>
+		<button onclick="plus()">+</button>
+		<button onclick="minus()">-</button>
+		<button onclick="multiplication()">X</button>
+		<button onclick="division()">/</button>
+		<hr>
+		<p>Результат: <span id="out"></span></p>
+	</body>
+</html>  
+  
